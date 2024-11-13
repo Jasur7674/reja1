@@ -1,5 +1,5 @@
 console.log("starting web server");
-const express = require("express");
+const express = require ("express");
 const app = express();
 const http = require('http');
 
@@ -32,7 +32,7 @@ app.set("view engine", "ejs");
 
 app.post("/create-item", (req, res) => {
     console.log(req.body);
-    res.json({test: "succesfully woring..."});
+    res.json({test:"succesfully woring..."});
 });
 
 app.get('/', function(req, res) {
