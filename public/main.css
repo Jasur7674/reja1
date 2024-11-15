@@ -172,6 +172,43 @@
     
 }
 
+
+
+.left_2_about {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+   
+}
+
+.about_details {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+ .details_address .left_p1 {
+    width: 33.15px;
+    color: var(--Black, #2B2B2B);
+    font-kerning: none;
+    font-feature-settings: 'calt' off;
+
+    /* Paragraph Progress - 15 */
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 160% */
+    text-transform: capitalize;
+}
+
+
+
+
+
 .frame .main_frame .left_frame .left_3 {
     position: relative;
     width: 220px;
@@ -234,6 +271,53 @@
     border: 1.5px solid #f0f0f6;
     
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .lang {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    height: 153px;
+    flex-shrink: 0;
+    margin-left: 47px;
+    margin-right: 38px;
+}
+
+.lang_info {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.lang_h3 {
+    color: var(--Black, #2B2B2B);
+
+H4 - 18px */
+/* font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: 123.6%; /* 22.248px */
+/* text-transform: capitalize;
+} */ */
 
 
 
