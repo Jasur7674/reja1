@@ -228,38 +228,84 @@ console.log("train task is working.");
 
 // ????????????????????????????????????????????????????????????????????????????
 // RETURN CALLBACK
+// CASE 7: SETINTERVAL
 
-console.log("JackMa:s advices");
-const list5 = [
-    "Be a good student", //0-20
-    "Choose a right leader and do more mistakes", //20-30
-    "Start working for yourself", //30-40
-    "Do what you are good at", //40-50
-    "Do investments for young generation", //50-60
-    "And now take a rest", //60
-];
+// console.log("JackMa:s advices");
+// const list5 = [
+//     "Be a good student", //0-20
+//     "Choose a right leader and do more mistakes", //20-30
+//     "Start working for yourself", //30-40
+//     "Do what you are good at", //40-50
+//     "Do investments for young generation", //50-60
+//     "And now take a rest", //60
+// ];
 
-function advice5(age5, callback) {
-    if(typeof age5 !== "number") callback("insert a number", null);
-    else if(age5 <= 20) callback(null, list5[0]);
-    else if(age5 > 20 && age5 <= 30) callback(null, list5[1]);
-    else if(age5 > 30 && age5 <= 40) callback(null, list5[2]);
-    else if(age5 > 40 && age5 <= 50) callback(null, list5[3]);
-    else if(age5 > 50 && age5 <= 60) callback(null, list5[4]);
-    // else {
-    //     setInterval(function () {
-    //         callback(null, list5[5]);
-    //     },5000);
-    // }
-};
+// function advice5(age5, callback) {
+//     if(typeof age5 !== "number") callback("insert a number", null);
+//     else if(age5 <= 20) callback(null, list5[0]);
+//     else if(age5 > 20 && age5 <= 30) callback(null, list5[1]);
+//     else if(age5 > 30 && age5 <= 40) callback(null, list5[2]);
+//     else if(age5 > 40 && age5 <= 50) callback(null, list5[3]);
+//     else if(age5 > 50 && age5 <= 60) callback(null, list5[4]);
+//     // else {
+//     //     setInterval(function () {
+//     //         callback(null, list5[5]);
+//     //     },5000);
+//     // }
+// };
 
-console.log("passed from here 0");
+// console.log("passed from here 0");
 
-advice5(33, (err, data) => {
-    if(err) console.log('ERROR:', err);
-    else {
-        console.log(data);
+// advice5(33, (err, data) => {
+//     if(err) console.log('ERROR:', err);
+//     else {
+//         console.log(data);
+//     }
+// });
+
+// console.log("passed from here 1");
+
+
+// MIT TASK A:
+
+// MITASK’larni train.js fileda yozasiz!
+
+// yozish tartibingiz:
+
+// Masalani izohi
+// A-TASK: 
+
+// Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
+// MASALAN countLetter("e", "engineer") 3ni return qiladi.
+
+// masalani yechimi:
+// Qilgan Yechimingiz…
+
+
+// agarda npm run train deganimda train.js ishga tushmasa yengilgina “FAIL” bo’lasiz!
+
+
+// for (let i = 10; i >= 0; i--) {
+//     console.log('executed:', i);
+//   };
+
+// for (let i = 0; i <= 10; i++) {
+//   console.log('executed:', i)
+// };
+
+// console.log('11 10dan kichik emas shuning uchun frning logikasi false qiymatgacha berilgan mnatiqni loop qiladi');
+  
+
+function taskA(a, b) {
+let countLetter = 0;
+for (let c = 0; c < b.length; c++) {
+    if (b[c] === a) {
+        countLetter++;
     }
-});
+}
+return countLetter;
+  }
 
-console.log("passed from here 1");
+ const  result = taskA("e", "Palestine");
+ console.log("result:", result)
+
