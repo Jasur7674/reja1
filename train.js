@@ -284,6 +284,21 @@ console.log("train task is working.");
 
 // agarda npm run train deganimda train.js ishga tushmasa yengilgina “FAIL” bo’lasiz!
 
+// functionsga oid argument & parametr tushunchalari
+
+// define (a & b: parametr hisoblanadi)
+
+// function calculate (a,b) {
+ // const a = 10;
+  // const b = 7;
+  // return a + b;
+// }
+
+// call (10, 2 argument hisoblanadi)
+
+// const result = calculate (10, 2);
+// console.log("result:", result)
+
 
 // for (let i = 10; i >= 0; i--) {
 //     console.log('executed:', i);
@@ -299,7 +314,7 @@ console.log("train task is working.");
 function taskA(a, b) {
 let countLetter = 0;
 for (let c = 0; c < b.length; c++) {
-    if (b[c] === a) {
+     if (b[c] === a) {
         countLetter++;
     }
 }
