@@ -433,7 +433,7 @@ text-transform: capitalize;
 }
 
 .middle_hire {
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: row;
 }
@@ -445,17 +445,14 @@ text-transform: capitalize;
 
   .middle_hire_botton .link_href .icon {
     position: relative;
-    /* flex-direction: row; */
     width: 70px;
     height: 17px;
-    /* border-radius: 50%; */
     filter: drop-shadow(0 4px rgba(0, 0, 0, 0.25));
     background: #ffb400;
   }
 
   .middle_hire_botton .link_href .icon .icon_hire {
     position: relative;
-    /* flex-direction: row; */
     left: 29.17%;
     right: 27.08%;
     margin-top: 5.86px;
@@ -465,6 +462,7 @@ text-transform: capitalize;
 .middle_block1 {
     margin-top: 30px;
 }
+
 
 .middle_bottom {
   position: relative;

@@ -27,7 +27,7 @@ app.set("view engine", "ejs");
 // 4 - rooting codes
 app.post("/create-item", (req, res) => {   
     // console.log(req.body); 
-    // res.json({test:"succesfully woring..."});     
+    // res.json({test:"succesfully woring..."});      
 }); 
 app.get("/author", (req, res) => {
     res.render("author", {user: user });   
@@ -37,11 +37,11 @@ app.get("/", function(req, res) {
     res.render("shopping");
 });
 
-const server = http.createServer(app);
+const server = http.createServer(app);  
 let PORT = 3000;
-server.listen(PORT,  function() {
-    console.log(`Server is running succesfully on port: ${PORT}`);
-});
+server.listen(PORT,  function() {   
+    console.log(`Server is running succesfully on port: ${PORT}`); 
+}); 
 
 
 
