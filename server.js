@@ -29,18 +29,20 @@ app.post("/create-item", (req, res) => {
     // console.log(req.body); 
     // res.json({test:"succesfully woring..."});      
 }); 
-app.get("/author", (req, res) => {
-    res.render("author", {user: user });   
-});  
+// app.get("/author", (req, res) => {
+//     res.render("author", {user: user });   
+// });  
  
 app.get("/", function(req, res) {
-    res.render("shopping");
+    res.render("plans"); 
 });
 
-const server = http.createServer(app);  
+const server = http.createServer(app);   
 let PORT = 3000;
 server.listen(PORT,  function() {   
-    console.log(`Server is running succesfully on port: ${PORT}`); 
+    console.log(
+        `Server is running succesfully on port: ${PORT} http://localhost:${PORT}`
+    ); 
 }); 
 
 
