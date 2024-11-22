@@ -44,17 +44,67 @@
   
 
 //definition
-function taskA(a, b) {
-    let countLetter = 0;
-    for (let c = 0; c < b.length; c++) {
-         if (b[c] === a) {
-            countLetter++;
+// function taskA(a, b) {
+//     let countLetter = 0;
+//     for (let c = 0; c < b.length; c++) {
+//          if (b[c] === a) {
+//             countLetter++;
+//         }
+//     }
+//     return countLetter;
+//       }
+    
+//       //call
+//      const  result = taskA("e", "Palestine");
+//      console.log("result:", result)
+    
+
+// B-TASK: 
+
+// Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha stringda qatnashgan raqamlarni sonini bizga return qilsin.
+// MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+
+// function countNumbers(number) {
+//     let count = 0;
+//     for (let n = 0; n < number.length; n++) {
+//         for ( let u = 0; u <= 9; u++) {
+//             if (u == number[n]) count++;
+//         }
+//     }
+//     return count;
+// }
+
+// const result = countNumbers("So7u7th44Kor13ea");
+// console.log("result:", result);
+
+
+// define
+async function countNumbers(number) {
+    if( typeof number == "") throw new Error("Something went wrong!");
+
+    let count = 0;
+    for (let n = 0; n < number.length; n++) {
+        for (let u = 0; u <= 9; u++) {
+            if (u == number[n]) count++;
         }
     }
-    return countLetter;
-      }
-    
-      //call
-     const  result = taskA("e", "Palestine");
-     console.log("result:", result)
-    
+    return count;
+}
+
+// call
+async function digits() {
+    countNumbers("So7u7th44Kor13ea0")
+    .then(result => {
+        console.log("result:", result);
+    });
+     countNumbers("Uzb27ekist45an1")
+    .then(result => {
+            console.log("result:", result);    
+        
+    })
+    .catch((err) => {
+            console.log("ERROR:", err);
+    });
+}
+digits();
+   
