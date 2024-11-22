@@ -19,20 +19,20 @@ mongodb.connect(connectionString, {
     console.log("MongoDB connection set successfully");
     module.exports = clientData;         
     // after connection requiring app
- 
+  
     const app = require("./app");
-             
+                 
  // 4 - rooting codes
 
 const server = http.createServer(app);   
 let PORT = 3000;
-server.listen(PORT,  function() {   
+server.listen(PORT, function() {   
     console.log(
-        `Server is running succesfully on port: ${PORT} http://localhost:${PORT}`
+        `Server is running succesfully on port: ${PORT} http://localhost:${PORT}`    
          ); 
        }); 
      } 
-   }    
+   }     
 ); 
- 
+         
    
