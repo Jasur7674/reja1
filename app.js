@@ -57,7 +57,7 @@ app.get("/", function(req, res) {
     .toArray((err, data) => {       
         if (err) {
             console.log(err);
-            res.end("Something went wrong");
+            res.end("Something went wrong");    
         } else {
             // console.log(data);
             res.render("plans", { items: data });    
@@ -67,10 +67,10 @@ app.get("/", function(req, res) {
 
     
 // exporting "app" from appJS to serverJS 
-
+ 
 module.exports = app;
    
-           
+            
 
-  
+    
     

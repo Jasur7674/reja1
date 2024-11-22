@@ -88,7 +88,7 @@ async function countNumbers(number) {
             if (u == number[n]) count++;
         }
     }
-    return count;
+    return count;                                               
 }
 
 // call
