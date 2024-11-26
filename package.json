@@ -1,5 +1,5 @@
 {
-  "name": "reja",
+  "name": "plans",
   "version": "1.0.0",
   "description": "our first project",
   "main": "server.js",
@@ -9,7 +9,7 @@
     "train": "nodemon train.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Khan",
+  "author": "Khaan",
   "license": "ISC",
   "dependencies": {
     "db": "^6.0.3",
