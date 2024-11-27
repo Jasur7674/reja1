@@ -311,20 +311,20 @@ console.log("train task is working.");
 // console.log('11 10dan kichik emas shuning uchun frning logikasi false qiymatgacha berilgan mnatiqni loop qiladi');
   
 
-//definition
-function taskA(a, b) {
-let countLetter = 0;
-for (let c = 0; c < b.length; c++) {
-     if (b[c] === a) {
-        countLetter++;
-    }
-}
-return countLetter;
-  }
+// //definition
+// function taskA(a, b) {
+// let countLetter = 0;
+// for (let c = 0; c < b.length; c++) {
+//      if (b[c] === a) {
+//         countLetter++;
+//     }
+// }
+// return countLetter;
+//   }
 
-  //call
- const  result = taskA("e", "Palestine");
- console.log("result:", result)
+//   //call
+//  const  result = taskA("e", "Palestine");
+//  console.log("result:", result)
 
 
 

@@ -3,21 +3,10 @@ const express = require("express");
 // const res = require("exprress/lib/response");
 const app = express();
 
-// const fs = require("fs");
-// const { error } = require("console");
-
-// let user;
-// fs.readFile("database/user.json", "utf8", (err, data) => {
-//     if(err) {
-//         console.log("ERROR:", err);
-//     } else {
-//         user = JSON.parse(data)
-//     }
-// });
-
 // MongoDB call
 
 const db = require("./server").db();
+const mongodb = require("mongodb");
 
 // 1 - Entry codes
 app.use(express.static("public"));
@@ -32,18 +21,22 @@ app.set("view engine", "ejs");
 // 4 - rooting codes
 app.post("/create-item", (req, res) => {
   console.log("User entered /create-item");
-  // console.log(req.body);
   const new_plans = req.body.plans;
   db.collection("plans").insertOne({ plans: new_plans }, (err, data) => {
-    // console.log(data.ops);
     res.json(data.ops[0]);
   });
-  // res.end("success");
-  // res.json({test:"succesfully woring..."});
 });
-// app.get("/author", (req, res) => {
-//     res.render("author", {user: user });
-// });
+
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  console.log(id);
+  db.collection("plans").deleteOne(
+    { _id: new mongodb.ObjectId(id) },
+    function (err, data) {
+      res.json({ state: "Success" });
+    }
+  );
+});
 
 app.get("/", function (req, res) {
   console.log("User entered /");
@@ -54,7 +47,6 @@ app.get("/", function (req, res) {
         console.log(err);
         res.end("Something went wrong");
       } else {
-        // console.log(data);
         res.render("plans", { items: data });
       }
     });
