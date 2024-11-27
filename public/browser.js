@@ -49,7 +49,7 @@ document.addEventListener("click", function (c) {
           console.log(response.data);
           c.target.parentElement.parentElement.remove();
         })
-        .catch((err) => {
+        .catch((err) => { 
           console.log("Please, try again1!");
         });
     }
