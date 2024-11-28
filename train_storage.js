@@ -32,7 +32,6 @@ console.log("train task is working.");
 //     console.log('Answer:', data);
 // });
 
-
 // console.log("JackMa:s advices");
 // const list1 = [
 //     "Be a good student", //0-20
@@ -54,7 +53,7 @@ console.log("train task is working.");
 //     else {
 //         setTimeout(function(){
 //             callback(null, list1[5]);
-//         }, 4000); 
+//         }, 4000);
 //     }
 // };
 
@@ -69,10 +68,9 @@ console.log("train task is working.");
 
 // console.log('passed from here 1');
 
-
 // Till all functions which we learned were synchronous functions!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-// Asynchronous??????????????????????????????????????????????????????????????????? 
+// Asynchronous???????????????????????????????????????????????????????????????????
 
 // console.log("JackMa's advices");
 // const list2 = [
@@ -99,10 +97,9 @@ console.log("train task is working.");
 //         // core modules don't work in asynchronous funtions
 //         // setTimeout(function(){
 //         //     return list2[5];
-//         // }, 4000); 
+//         // }, 4000);
 //     }
 // };
-
 
 // // CALL VIA then, catch
 // console.log('passed from here 0');
@@ -171,12 +168,12 @@ console.log("train task is working.");
 //         return new Promise((resolve, reject) => {
 //             setTimeout(() => {
 //                 resolve(list3[5]);
-//             },15000); 
-//         }); 
+//             },15000);
+//         });
 //     }
 // };
 
-// // call 
+// // call
 // async function run1() {
 //     let answer1 = await advice3(33);
 //     console.log(answer1);
@@ -199,7 +196,7 @@ console.log("train task is working.");
 //     "And now take a rest", //60
 // ];
 
-//CASE 6: SETINTERVAL 
+//CASE 6: SETINTERVAL
 
 // // promise, setinterval
 // // defenition
@@ -214,12 +211,12 @@ console.log("train task is working.");
 //         return new Promise((resolve, reject) => {
 //             setInterval(() => {
 //                 resolve(list4[5]);
-//             },5000); 
-//         }); 
+//             },5000);
+//         });
 //     }
 // };
 
-// // call 
+// // call
 // async function run2() {
 //     let answer2 = await advice4(61);
 //     console.log(answer2);
@@ -265,7 +262,6 @@ console.log("train task is working.");
 
 // console.log("passed from here 1");
 
-
 // MIT TASK A:
 
 // MITASK’larni train.js fileda yozasiz!
@@ -273,14 +269,13 @@ console.log("train task is working.");
 // yozish tartibingiz:
 
 // Masalani izohi
-// A-TASK: 
+// A-TASK:
 
 // Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
 // MASALAN countLetter("e", "engineer") 3ni return qiladi.
 
 // masalani yechimi:
 // Qilgan Yechimingiz…
-
 
 // agarda npm run train deganimda train.js ishga tushmasa yengilgina “FAIL” bo’lasiz!
 
@@ -289,16 +284,15 @@ console.log("train task is working.");
 // define (a & b: parametr hisoblanadi)
 
 // function calculate (a,b) {
- // const a = 10;
-  // const b = 7;
-  // return a + b;
+// const a = 10;
+// const b = 7;
+// return a + b;
 // }
 
 // call (10, 2 argument hisoblanadi)
 
 // const result = calculate (10, 2);
 // console.log("result:", result)
-
 
 // for (let i = 10; i >= 0; i--) {
 //     console.log('executed:', i);
@@ -309,7 +303,6 @@ console.log("train task is working.");
 // };
 
 // console.log('11 10dan kichik emas shuning uchun frning logikasi false qiymatgacha berilgan mnatiqni loop qiladi');
-  
 
 // //definition
 // function taskA(a, b) {
@@ -326,11 +319,9 @@ console.log("train task is working.");
 //  const  result = taskA("e", "Palestine");
 //  console.log("result:", result)
 
-
-
 //  ???????????????????????????????????????????????????????
 
-// /* 
+// /*
 
 //   FRONTEND DEVELOPMENT: BSSR (EJS) vs SPA (React)
 
@@ -339,9 +330,7 @@ console.log("train task is working.");
 //       Structure => Header & Body
 //       Method => get & post
 
-
 //   PATTERN: ARCHITECTURE vs DESIGN PATTERN
-
 
 // */
 
@@ -357,12 +346,12 @@ console.log("train task is working.");
   
  */
 
-  // ???????????????????????????????????????????????????!!!!!!!!!!!!!!!!!!!!!!!
-  // This is coming from app.js => d.cpllection
-  //  if (err) {
-  //   console.log(err);
-  //   res.end("Something went wrong1");
-  // } else {
-  //   res.end("Inserted successfully");
-  // }
+// ???????????????????????????????????????????????????!!!!!!!!!!!!!!!!!!!!!!!
+// This is coming from app.js => d.cpllection
+//  if (err) {
+//   console.log(err);
+//   res.end("Something went wrong1");
+// } else {
+//   res.end("Inserted successfully");
+// }
 // ?????????????????????????????????????????????????????????!!!!!!!!!!!!!!!!!!!

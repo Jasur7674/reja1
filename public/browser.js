@@ -1,3 +1,7 @@
+// const { response } = require("../app");
+
+// const { response } = require("../app");
+
 console.log("FrontEnd JS is working.");
 
 function itemtemplate(item) {
@@ -49,15 +53,46 @@ document.addEventListener("click", function (c) {
           console.log(response.data);
           c.target.parentElement.parentElement.remove();
         })
-        .catch((err) => { 
-          console.log("Please, try again1!");
+        .catch((err) => {
+          console.log("Please, try again delete!");
         });
     }
   }
 
   //  Edit operations
 
-  if (c.target.classList.contains("edite-me")) {
-    alert("clicked edite button");
+  if (c.target.classList.contains("edit-me")) {
+    // alert("clicked edite button");
+    let userInput = prompt(
+      "Edit new!",
+      c.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+    if (userInput) {
+      axios
+        .post("/edit-item", {
+          id: c.target.getAttribute("data-id"),
+          new_input: userInput,
+        })
+        .then((response) => {
+          console.log(response.data);
+          c.target.parentElement.parentElement.querySelector(
+            ".item-text"
+          ).innerHTML = userInput;
+        })
+        .catch((err) => {
+          console.log("Please, try again edit!");
+        });
+    }
   }
+});
+
+document.getElementById("clean-all").addEventListener("click", function () {
+  // "Forum" ning ichida emas shuning uchun preventdefault qilish shart emas
+  axios
+    .post("/erase-all", { erase_all: true })
+    .then((response) => {
+      alert(response.data.state);
+      document.location.reload();
+    });
+    // .catch((err) => {}); 
 });

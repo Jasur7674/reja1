@@ -33,9 +33,30 @@ app.post("/delete-item", (req, res) => {
   db.collection("plans").deleteOne(
     { _id: new mongodb.ObjectId(id) },
     function (err, data) {
-      res.json({ state: "Success" });
+      res.json({ state: "Success delete!" });
     }
   );
+});
+
+app.post("/edit-item", (req, res) => {
+  const data = req.body;
+  console.log(data);
+  db.collection("plans").findOneAndUpdate(
+    { _id: new mongodb.ObjectId(data.id) },
+    { $set: { plans: data.new_input } },
+    function (err, data) {
+      res.json({ state: "Success edit!" });
+    }
+  );
+  // res.end("well done uh!?");
+});
+
+app.post("/erase-all", (req, res) => {
+  if (req.body.erase_all) {
+    db.collection("plans").deleteMany(function () {
+      res.json({state: "All plans deleted."});
+    });
+  }
 });
 
 app.get("/", function (req, res) {
