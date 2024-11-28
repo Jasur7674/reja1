@@ -116,64 +116,102 @@
 
 
 
-//  Solve
-// Define
-class hyper {
-    constructor(apple, cherry, water) {
-        this.products = {
-            apple,
-            cherry,
-            water
-        };
-        // constructor
-        // product object
-        // apple, cherry, water properties
-    }
-    inform(message) {
-        const time = new Date().toLocaleTimeString('kr-KR', { hour: '2-digit', minute: '2-digit' });
-        console.log(`now ${time} ${message}`);
-    }
-    //  Korean local time identitfy
-    remain() {
-        const productDetails = Object.entries(this.products)   // stringga aylantirish
+// //  Solve
+// // Define
+// class hyper {
+//     constructor(apple, cherry, water) {
+//         this.products = {
+//             apple,
+//             cherry,
+//             water
+//         };
+//         // constructor
+//         // product object
+//         // apple, cherry, water properties
+//     }
+//     inform(message) {
+//         const time = new Date().toLocaleTimeString('kr-KR', { hour: '2-digit', minute: '2-digit' });
+//         console.log(`now ${time} ${message}`);
+//     }
+//     //  Korean local time identitfy
+//     remain() {
+//         const productDetails = Object.entries(this.products)   // stringga aylantirish
 
-        // Iteration methods
+//         // Iteration methods
 
-            .map(([key, value]) => `${value} ${key}`)
-            .join(', ');
+//             .map(([key, value]) => `${value} ${key}`)
+//             .join(', ');
 
-        const message = `${productDetails} exist!`;
-        this.inform(message);
-        return message;
-        // qancha maxsulot borligini aniqlab return qilish
-    }
-    sell(product, quantity) {   // maxsulotni sotish
-        if (this.products[product] === undefined) {  // maxsulot bor yoki yo'qligini tekshirish
-            this.inform(`there is no item: ${product}`);
-            return;   // agar maxsulot yo'q bo'lsa hbar berish
-        }
-        if (this.products[product] < quantity) {  // maxsulot yetarli ekanligini tekshiriah
-            this.inform(`there is no enough item: ${product}`);
-            return;
-            // yetarli maxsulot bo'lmasa xabar berish
-        }
-        this.products[product] -= quantity; // sotilgan mkiqdorni ayirib tashlash
-        this.inform(`${quantity} ${product} sold.`);  // va sotilgan miqdor haqida habar beradi
-    }
-    accept(product, quantity) { 
-        if (this.products[product] === undefined) {
-            this.products[product] = 0; // agar yangi maxsulot qo'shilsa odan boshlab hisoblaydi
-        }
-        this.products[product] += quantity;
-        this.inform(`${quantity} ${product} accepted.`);
-        // maxsulot qo'shish
-    }
+//         const message = `${productDetails} exist!`;
+//         this.inform(message);
+//         return message;
+//         // qancha maxsulot borligini aniqlab return qilish
+//     }
+//     sell(product, quantity) {   // maxsulotni sotish
+//         if (this.products[product] === undefined) {  // maxsulot bor yoki yo'qligini tekshirish
+//             this.inform(`there is no item: ${product}`);
+//             return;   // agar maxsulot yo'q bo'lsa hbar berish
+//         }
+//         if (this.products[product] < quantity) {  // maxsulot yetarli ekanligini tekshiriah
+//             this.inform(`there is no enough item: ${product}`);
+//             return;
+//             // yetarli maxsulot bo'lmasa xabar berish
+//         }
+//         this.products[product] -= quantity; // sotilgan mkiqdorni ayirib tashlash
+//         this.inform(`${quantity} ${product} sold.`);  // va sotilgan miqdor haqida habar beradi
+//     }
+//     accept(product, quantity) { 
+//         if (this.products[product] === undefined) {
+//             this.products[product] = 0; // agar yangi maxsulot qo'shilsa odan boshlab hisoblaydi
+//         }
+//         this.products[product] += quantity;
+//         this.inform(`${quantity} ${product} accepted.`);
+//         // maxsulot qo'shish
+//     }
+// }
+
+// // call
+
+// const result = new hyper(4, 5, 2);
+// console.log(result.remain());
+// result.sell('apple', 7);
+// result.accept('cherry', 5); 
+// console.log(result.remain());
+
+
+
+// D-TASK: 
+
+// Shunday function tuzing,
+// u 2ta string parametr ega bolsin, 
+// hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+
+// define
+
+// checkContent("mitgroup", "gmtiprou");
+
+// Ikkita string bir harflardan iboratligini tekshirish
+
+function checkLetter(word, word1, callback) {  // pramertrlar
+    const splitword = word.split('').sort().join('');   // split,sort va join bulat method:
+    const splitword1 = word1.split('').sort().join(''); //  : array elementlarga ajratib, tartiblab, qayta stringga joylashtirish
+
+    // yuqorida stringdagi harflar ajratildi
+
+    // result return 
+const result =  splitword=== splitword1;  // ikkita parametrni bir xil ekanligini tekshirish
+callback(result);
 }
 
-// call
+// call 
 
-const result = new hyper(4, 5, 2);
-console.log(result.remain());
-result.sell('apple', 7);
-result.accept('cherry', 5); 
-console.log(result.remain());
+checkLetter("Palestine", "Plaestine", function(same) {  // callback
+    console.log(same);  // buyerda true qiymat qaytishi kerak stringdagi so'zlar bir xil harflar bo'lgani uchun
+});
+
+// checkLetter("South Korea", "North Korea", function(same) {
+//     console.log(same);  // buyerda false qiymat qaytishi kerak stringdagi so'zlar har xil harflar bo'lgani uchun
+// });
+
