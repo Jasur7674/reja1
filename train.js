@@ -101,20 +101,15 @@
 // }
 // digits();
 
-
-
-
-// MITASK-C 
+// MITASK-C
 
 // Shunday class tuzing tuzing nomi Shop,
-//  va uni constructoriga 3 hil mahsulot pass bolsin, 
-//  hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. 
+//  va uni constructoriga 3 hil mahsulot pass bolsin,
+//  hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul.
 //  Har bir method ishga tushgan vaqt ham log qilinsin.
-// MASALAN: const shop = new Shop(4, 5, 2); 
-// shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! 
+// MASALAN: const shop = new Shop(4, 5, 2);
+// shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud!
 // shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
-
-
 
 // //  Solve
 // // Define
@@ -160,7 +155,7 @@
 //         this.products[product] -= quantity; // sotilgan mkiqdorni ayirib tashlash
 //         this.inform(`${quantity} ${product} sold.`);  // va sotilgan miqdor haqida habar beradi
 //     }
-//     accept(product, quantity) { 
+//     accept(product, quantity) {
 //         if (this.products[product] === undefined) {
 //             this.products[product] = 0; // agar yangi maxsulot qo'shilsa odan boshlab hisoblaydi
 //         }
@@ -175,18 +170,15 @@
 // const result = new hyper(4, 5, 2);
 // console.log(result.remain());
 // result.sell('apple', 7);
-// result.accept('cherry', 5); 
+// result.accept('cherry', 5);
 // console.log(result.remain());
 
-
-
-// D-TASK: 
+//  MIT D-TASK:
 
 // Shunday function tuzing,
-// u 2ta string parametr ega bolsin, 
+// u 2ta string parametr ega bolsin,
 // hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
-
 
 // define
 
@@ -194,24 +186,60 @@
 
 // Ikkita string bir harflardan iboratligini tekshirish
 
-function checkLetter(word, word1, callback) {  // pramertrlar
-    const splitword = word.split('').sort().join('');   // split,sort va join bulat method:
-    const splitword1 = word1.split('').sort().join(''); //  : array elementlarga ajratib, tartiblab, qayta stringga joylashtirish
+// function checkLetter(word, word1, callback) {
+//   // pramertrlar
+//   const splitword = word.split("").sort().join(""); // split,sort va join bulat method:
+//   const splitword1 = word1.split("").sort().join(""); //  : array elementlarga ajratib, tartiblab, qayta stringga joylashtirish\
 
-    // yuqorida stringdagi harflar ajratildi
+//   // result return
+//   const result = splitword === splitword1; // ikkita parametrni bir xil ekanligini tekshirish
+//   callback(result);
+// }
 
-    // result return 
-const result =  splitword=== splitword1;  // ikkita parametrni bir xil ekanligini tekshirish
-callback(result);
-}
+// // call
 
-// call 
-
-checkLetter("Palestine", "Plaestine", function(same) {  // callback
-    console.log(same);  // buyerda true qiymat qaytishi kerak stringdagi so'zlar bir xil harflar bo'lgani uchun
-});
+// checkLetter("Palestine", "Plaestine", function (same) {
+//   // callback
+//   console.log(same); // buyerda true qiymat qaytishi kerak stringdagi so'zlar bir xil harflar bo'lgani uchun
+// });
 
 // checkLetter("South Korea", "North Korea", function(same) {
 //     console.log(same);  // buyerda false qiymat qaytishi kerak stringdagi so'zlar har xil harflar bo'lgani uchun
 // });
 
+
+
+
+// MIT E-TASK: 
+
+// Shunday function tuzing, 
+// u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// MASALAN: 
+// getReverse("hello")
+//  return qilsin "olleh"
+
+// define
+
+// callback function used "promise(reject,resove)"
+function doReverse (hereString) {
+  return new Promise((resolve, reject) => {
+    if (typeof hereString === 'string' && hereString.length > 0) {
+      const reversedString = hereString.split('').reverse().join('');
+      resolve(reversedString);
+    } else {
+      reject("Smth went wrong.!");
+      //Agar string bo'sh bo'lsa "catch qism log bo'ladi"
+    }
+  });
+}
+
+// call
+
+doReverse("Palestine")
+  .then((result) => {
+    console.log(result);
+  })
+
+  .catch((err) => {
+    console.log(err);
+  }); 

@@ -358,17 +358,15 @@ console.log("train task is working.");
 
 // 4444444444444444444444444444444444444444444444444444444444
 
-// MITASK-C 
+// MITASK-C
 
 // Shunday class tuzing tuzing nomi Shop,
-//  va uni constructoriga 3 hil mahsulot pass bolsin, 
-//  hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul. 
+//  va uni constructoriga 3 hil mahsulot pass bolsin,
+//  hamda classning 3ta methodi bolsin, biri qoldiq, biri sotish va biri qabul.
 //  Har bir method ishga tushgan vaqt ham log qilinsin.
-// MASALAN: const shop = new Shop(4, 5, 2); 
-// shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! 
+// MASALAN: const shop = new Shop(4, 5, 2);
+// shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud!
 // shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
-
-
 
 // //  Solve
 // // Define
@@ -414,7 +412,7 @@ console.log("train task is working.");
 //         this.products[product] -= quantity; // sotilgan mkiqdorni ayirib tashlash
 //         this.inform(`${quantity} ${product} sold.`);  // va sotilgan miqdor haqida habar beradi
 //     }
-//     accept(product, quantity) { 
+//     accept(product, quantity) {
 //         if (this.products[product] === undefined) {
 //             this.products[product] = 0; // agar yangi maxsulot qo'shilsa odan boshlab hisoblaydi
 //         }
@@ -429,5 +427,56 @@ console.log("train task is working.");
 // const result = new hyper(4, 5, 2);
 // console.log(result.remain());
 // result.sell('apple', 7);
-// result.accept('cherry', 5); 
+// result.accept('cherry', 5);
 // console.log(result.remain());
+
+//   process manager orders
+// npm i pm2 —global
+// pm2 ls
+
+// pm2 start server.js --name="JOHN_REJA"
+
+// pm2 stop id
+// pm2 delete id
+
+// pm2 logs
+// pm2 log id
+
+
+
+// ??????????????????????????????????????????????????????????????????????????
+
+//  MIT D-TASK:
+
+// Shunday function tuzing,
+// u 2ta string parametr ega bolsin,
+// hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+// define
+
+// checkContent("mitgroup", "gmtiprou");
+
+// Ikkita string bir harflardan iboratligini tekshirish
+
+// function checkLetter(word, word1, callback) {
+//   // pramertrlar
+//   const splitword = word.split("").sort().join(""); // split,sort va join bulat method:
+//   const splitword1 = word1.split("").sort().join(""); //  : array elementlarga ajratib, tartiblab, qayta stringga joylashtirish\
+
+//   // result return
+//   const result = splitword === splitword1; // ikkita parametrni bir xil ekanligini tekshirish
+//   callback(result);
+// }
+
+// // call
+
+// checkLetter("Palestine", "Plaestine", function (same) {
+//   // callback
+//   console.log(same); // buyerda true qiymat qaytishi kerak stringdagi so'zlar bir xil harflar bo'lgani uchun
+// });
+
+// // checkLetter("South Korea", "North Korea", function(same) {
+// //     console.log(same);  // buyerda false qiymat qaytishi kerak stringdagi so'zlar har xil harflar bo'lgani uchun
+// // });
+ 
