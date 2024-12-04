@@ -480,3 +480,37 @@ console.log("train task is working.");
 // //     console.log(same);  // buyerda false qiymat qaytishi kerak stringdagi so'zlar har xil harflar bo'lgani uchun
 // // });
  
+
+// // MIT E-TASK: 
+
+// // Shunday function tuzing, 
+// // u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// // MASALAN: 
+// // getReverse("hello")
+// //  return qilsin "olleh"
+
+// // define
+
+// // callback function used "promise(reject,resove)"
+// function doReverse (hereString) {
+//   return new Promise((resolve, reject) => {
+//     if (typeof hereString === 'string' && hereString.length > 0) {
+//       const reversedString = hereString.split('').reverse().join('');
+//       resolve(reversedString);
+//     } else {
+//       reject("Smth went wrong.!");
+//       //Agar string bo'sh bo'lsa "catch qism log bo'ladi"
+//     }
+//   });
+// }
+
+// // call
+
+// doReverse("Palestine")
+//   .then((result) => {
+//     console.log(result);
+//   })
+
+//   .catch((err) => {
+//     console.log(err);
+//   }); 

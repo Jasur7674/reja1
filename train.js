@@ -210,36 +210,96 @@
 
 
 
-// MIT E-TASK: 
+// // MIT E-TASK: 
 
-// Shunday function tuzing, 
-// u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// // Shunday function tuzing, 
+// // u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
+// // MASALAN: 
+// // getReverse("hello")
+// //  return qilsin "olleh"
+
+// // define
+
+// // callback function used "promise(reject,resove)"
+// function doReverse (hereString) {
+//   return new Promise((resolve, reject) => {
+//     if (typeof hereString === 'string' && hereString.length > 0) {
+//       const reversedString = hereString.split('').reverse().join('');
+//       resolve(reversedString);
+//     } else {
+//       reject("Smth went wrong.!");
+//       //Agar string bo'sh bo'lsa "catch qism log bo'ladi"
+//     }
+//   });
+// }
+
+// // call
+
+// doReverse("Palestine")
+//   .then((result) => {
+//     console.log(result);
+//   })
+
+//   .catch((err) => {
+//     console.log(err);
+//   }); 
+
+
+//   // TASK F
+
+// Yagona string argumentga ega 
+// findDoublers nomli function tuzing
+// Agar stringda bittadan ortiq bir xil harflar ishtirok etgan bo'lsa
+// true yokida false natija qaytarsin.
+
 // MASALAN: 
-// getReverse("hello")
-//  return qilsin "olleh"
+// findDoublers("hello"); natija true qaytadi. 
+// Sababi ikki marotaba takrorlangan 'll' harfi mavjud!
+
+
+
+// // define
+
+// function findDoublers(double) {
+//   for (let a = 0; a < double.length; a++) {
+//     if (double.indexOf(double[a]) !== a) {
+//       return double[a];  
+//     }
+//   }
+//   return null;
+// }
+
+// //  call
+
+// const result = findDoublers("Palestine");
+// console.log(result);
+
 
 // define
 
-// callback function used "promise(reject,resove)"
-function doReverse (hereString) {
-  return new Promise((resolve, reject) => {
-    if (typeof hereString === 'string' && hereString.length > 0) {
-      const reversedString = hereString.split('').reverse().join('');
-      resolve(reversedString);
-    } else {
-      reject("Smth went wrong.!");
-      //Agar string bo'sh bo'lsa "catch qism log bo'ladi"
+function findDoublers(doublers) {
+  const letter = new Set();
+  for (const shape of doublers) {
+    if (letter.has(shape)) {
+      return true;
     }
-  });
-}
+    letter.add(shape);
+  }
+  return false;
+};
 
-// call
+//  call 
 
-doReverse("Palestine")
-  .then((result) => {
-    console.log(result);
-  })
+console.log(findDoublers("Palestine"));
 
-  .catch((err) => {
-    console.log(err);
-  }); 
+
+
+
+
+
+
+
+
+
+
+
