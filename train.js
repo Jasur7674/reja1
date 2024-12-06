@@ -275,22 +275,70 @@
 // console.log(result);
 
 
-// define
+// FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF
 
-function findDoublers(doublers) {
-  const letter = new Set();
-  for (const shape of doublers) {
-    if (letter.has(shape)) {
-      return true;
-    }
-    letter.add(shape);
-  }
-  return false;
+// // define
+
+// function findDoublers(doublers) {
+//   const letter = new Set();
+//   for (const shape of doublers) {
+//     if (letter.has(shape)) {
+//       return true;
+//     }
+//     letter.add(shape);
+//   }
+//   return false;
+// };
+
+// //  call 
+
+// console.log(findDoublers("Palestine"));
+
+//  GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+
+// TASK G:
+
+// Yagona parametrga ega function tuzing.
+// Va bu function parametr orqalik integer ma'lumot turlariga ega bo'lgan bir arrayni qabul qilsin.
+// Ushbu function bizga arrayning tarkibidagi birinchi eng katta qiymatning indeksini qaytarsin.
+
+// MASALAN: 
+// getHighestIndex([5, 21, 12, 17 ,8]); 
+// return qiladi 1 sonini
+// Yuqoridagi misolda, birinchi indeksda 21 joylashgan.
+// Va bu 21 soni arrayning tarkibidagi birinchi eng katta son hisobladi 
+// va bizga uning indeksi 1 qaytadi.
+
+
+
+// const numbers = [3, 13, 7, 41];
+
+// const result = numbers.every((index) => {
+//   // console.log(`${index}`);
+//   // return index === 0;
+// });
+
+// for (const index of numbers) {
+//   console.log(index);
+// };
+
+
+function getIndex(numbers) {
+const bigNumber = Math.max(...numbers);
+
+const indexNumber = numbers.indexOf(bigNumber);
+
+console.log(`Biggest number: ${bigNumber}, Index: ${indexNumber}`);
+return indexNumber;
 };
 
-//  call 
+const numbers = [4,7,13,17,41];
+getIndex(numbers);
 
-console.log(findDoublers("Palestine"));
+
+
+
+
 
 
 

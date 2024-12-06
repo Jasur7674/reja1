@@ -442,8 +442,6 @@ console.log("train task is working.");
 // pm2 logs
 // pm2 log id
 
-
-
 // ??????????????????????????????????????????????????????????????????????????
 
 //  MIT D-TASK:
@@ -479,13 +477,12 @@ console.log("train task is working.");
 // // checkLetter("South Korea", "North Korea", function(same) {
 // //     console.log(same);  // buyerda false qiymat qaytishi kerak stringdagi so'zlar har xil harflar bo'lgani uchun
 // // });
- 
 
-// // MIT E-TASK: 
+// // MIT E-TASK:
 
-// // Shunday function tuzing, 
+// // Shunday function tuzing,
 // // u bitta string argumentni qabul qilib osha stringni teskari qilib return qilsin.
-// // MASALAN: 
+// // MASALAN:
 // // getReverse("hello")
 // //  return qilsin "olleh"
 
@@ -513,4 +510,84 @@ console.log("train task is working.");
 
 //   .catch((err) => {
 //     console.log(err);
-//   }); 
+//   });
+
+// There are 2 types of languages:
+
+//  Compiled languages: Java, GoLang, C, C++, C#, Rust        => Compile and Run
+
+//  Interpreted Languages: NodeJS, Python, PHP, Ruby          => Run
+
+// Welcome to the TypeScript Playground, this is a website
+// which gives you a chance to write, share and learn TypeScript.
+
+// You could think of it in three ways:
+//
+//  - A location to learn TypeScript where nothing can break
+//  - A place to experiment with TypeScript syntax, and share the URLs with others
+//  - A sandbox to experiment with different compiler features of TypeScript
+
+// const anExampleVariable = "Hello World"
+// console.log(anExampleVariable)
+
+// To learn more about the language, click above in "Examples" or "What's New".
+// Otherwise, get started by removing these comments and the world is your playground.
+
+// let box: string = "Hello";
+// box = "100";
+
+// const counter: number = 100;
+
+// let stage: number | string = "Hello";
+// stage = 100;
+
+// const pending: boolean = true;
+
+//  object
+
+//  interface
+
+// interface Person {
+//     name: string,
+//     age: number,
+//     nation: string
+// }
+
+// const person: Person = {
+//     name: 'Martin',
+//     age: 30,
+//     nation: 'English'
+// }
+
+// //    array
+
+// let skills: string[];
+// skills = ['Problem solving', 'Software Design']
+
+// // JavaScript
+
+// class Person {
+//     age:
+//     name:
+//     lname:
+
+//     constructor (age, name, lname) {
+//         this.age = age;
+//         this.name = name;
+//         this.lname = lname;
+//     }
+// }
+
+// TypeScript
+
+// class Person {
+//   age: number;
+//   name: string;
+//   lname: string;
+
+//   constructor (age: number, name:string, lname: string) {
+//       this.age = age;
+//       this.name = name;
+//       this.lname = lname;
+//   }
+// }
